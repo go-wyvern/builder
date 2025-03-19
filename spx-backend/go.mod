@@ -1,6 +1,7 @@
 module github.com/goplus/builder/spx-backend
 
 go 1.21.0
+
 require (
 	github.com/go-sql-driver/mysql v1.9.0
 	github.com/goplus/yap v0.8.2 //gop:class
@@ -26,6 +27,7 @@ require (
 require (
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/BurntSushi/toml v1.3.2 // indirect
+	github.com/DataIntelligenceCrew/go-faiss v0.2.0 // indirect
 	github.com/alex-ant/gomath v0.0.0-20160516115720-89013a210a82 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/gammazero/toposort v0.1.1 // indirect
@@ -41,6 +43,7 @@ require (
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.1 // indirect
 	github.com/tidwall/sjson v1.2.5 // indirect
+	github.com/yalue/onnxruntime_go v1.17.0 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	golang.org/x/net v0.27.0 // indirect
 	golang.org/x/oauth2 v0.21.0 // indirect

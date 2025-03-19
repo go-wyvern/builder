@@ -42,8 +42,10 @@ type Controller struct {
 	db            *gorm.DB
 	kodo          *kodoConfig
 	aigcClient    *aigc.AigcClient
+	knowledgeBase *model.KnowledgeBase
 	casdoorClient casdoorClient
 	copilot       copilot.AICopilot
+	embedded      copilot.EmbeddingService
 }
 
 // New creates a new controller.
