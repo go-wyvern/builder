@@ -14,6 +14,7 @@ import { toConfig, type Files, fromConfig, File } from '../common/file'
 import * as cloudHelper from '../common/cloud'
 import * as localHelper from '../common/local'
 import * as gbpHelper from '../common/gbp'
+import * as tarHelper from '../common/tar'
 import { hashFiles } from '../common/hash'
 import { assign } from '../common'
 import { ensureValidSpriteName, ensureValidSoundName } from '../common/asset-name'
@@ -412,9 +413,19 @@ export class Project extends Disposable {
     await this.load(metadata, files)
   }
 
+  async loadTarFile(file: globalThis.File) {
+    const { metadata, files } = await tarHelper.load(file)
+    await this.load(metadata, files)
+  }
+
   async exportGbpFile() {
     const [metadata, files] = await this.export()
     return await gbpHelper.save(metadata, files)
+  }
+
+  async exportTarFile() {
+    const [metadata, files] = await this.export()
+    return await tarHelper.save(metadata, files)
   }
 
   /** Load from cloud */
